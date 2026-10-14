@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: #111827;
+  color: #f9fafb;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+header p {
+  color: #9ca3af;
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.viewer-card {
+  display: flex;
+  flex-direction: column;
+  background: #1f2937;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 768px) {
+  .viewer-card {
+    flex-direction: row;
+  }
+}
+
+model-viewer {
+  width: 100%;
+  height: 520px;
+  background: radial-gradient(circle at center, #374151, #111827);
+}
+
+.controls {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.8rem;
+  min-width: 290px;
+  border-top: 1px solid #374151;
+}
+
+@media (min-width: 768px) {
+  .controls {
+    border-top: none;
+    border-left: 1px solid #374151;
+  }
+}
+
+.control-group h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9ca3af;
+  margin-bottom: 0.75rem;
+}
+
+.btn-group {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #4b5563;
+  background: #111827;
+  color: #e5e7eb;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: #374151;
+}
+
+.btn.active {
+  background: #d97706;
+  border-color: #f59e0b;
+  color: #ffffff;
+}

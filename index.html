@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escudo 3D Interactivo</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Librería oficial de Google model-viewer -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Personalizador de Escudo 3D</h1>
+    </header>
+
+    <div class="viewer-card">
+      <model-viewer
+        id="visorEscudo"
+        src="escudo.glb"
+        alt="Escudo 3D con materiales intercambiables"
+        camera-controls
+        auto-rotate
+        auto-rotate-delay="3000"
+        shadow-intensity="1.2"
+        exposure="1"
+        touch-action="pan-y">
+      </model-viewer>
+
+      <aside class="controls">
+        <div class="control-group">
+          <h3>Estampado Frontal</h3>
+          <div class="btn-group">
+            <button id="btn-woo" class="btn active">Dragón (Woo)</button>
+            <button id="btn-patria" class="btn">Águila (Patria)</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <h3>Material del Borde</h3>
+          <div class="btn-group">
+            <button id="btn-metal" class="btn active">Metálico</button>
+            <button id="btn-oro" class="btn">Dorado (Oro)</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
